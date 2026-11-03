@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <title>FinSync - Log Split Track Analyse Grow</title>
+    <meta name="description" content="FinSync - Offline-first Personal Finance & Investment Tracker. Log Split Track Analyse Grow. Tailored for Indian Rupee notation, bank passbooks, portfolio management, debt ledgers, and scheduled transactions." />
+    <meta property="og:title" content="FinSync - Log Split Track Analyse Grow" />
+    <meta property="og:description" content="FinSync - Offline-first Personal Finance & Investment Tracker. Log Split Track Analyse Grow. Tailored for Indian Rupee notation, bank passbooks, portfolio management, debt ledgers, and scheduled transactions." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="#059669" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="FinSync" />
+    <link rel="apple-touch-icon" href="./assets/aistudio/1000127183_6a8d46a3.png" />
+    <link rel="icon" type="image/png" href="./assets/aistudio/1000127183_6a8d46a3.png" />
+    <meta name="color-scheme" content="dark light" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <script>
+      (function() {
+        try {
+          var stored = localStorage.getItem('finsync_store_v1') || localStorage.getItem('expense_manager_store_v1') || localStorage.getItem('expense_manager_v2');
+          var isDark = true;
+          if (stored) {
+            var parsed = JSON.parse(stored);
+            var theme = parsed && parsed.settings && parsed.settings.theme;
+            if (theme === 'light') {
+              isDark = false;
+            } else if (theme === 'system') {
+              isDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+            } else if (theme === 'dark') {
+              isDark = true;
+            }
+          }
+          var root = document.documentElement;
+          var bg = isDark ? '#090d16' : '#f8fafc';
+          if (isDark) {
+            root.classList.add('dark');
+            root.style.colorScheme = 'dark';
+          } else {
+            root.classList.remove('dark');
+            root.style.colorScheme = 'light';
+          }
+          root.style.backgroundColor = bg;
+          root.setAttribute('data-theme', isDark ? 'dark' : 'light');
+          var metaTheme = document.querySelector('meta[name="theme-color"]');
+          if (metaTheme) {
+            metaTheme.setAttribute('content', bg);
+          }
+        } catch (e) {
+          document.documentElement.classList.add('dark');
+          document.documentElement.style.backgroundColor = '#090d16';
+        }
+      })();
+    </script>
+  </head>
+  <body class="bg-slate-50 text-slate-900 antialiased selection:bg-emerald-500 selection:text-white dark:bg-slate-950 dark:text-slate-100 min-h-screen">
+    <div id="root"></div>
+    <script type="module" src="./src/main.tsx"></script>
+  </body>
+</html>

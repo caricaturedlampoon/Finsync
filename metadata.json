@@ -1,0 +1,8 @@
+{
+  "name": "Remix  FinSync",
+  "description": "Offline-first Personal Finance \u0026 Investment Tracker tailored for Indian currency notation, bank passbooks, portfolio management, debt ledgers, and scheduled transactions.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

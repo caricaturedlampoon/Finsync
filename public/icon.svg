@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#059669" />
+      <stop offset="100%" stop-color="#047857" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.25" />
+    </filter>
+  </defs>
+  <rect width="512" height="512" rx="128" fill="url(#grad)" />
+  <!-- Circular badge subtle ring -->
+  <circle cx="256" cy="256" r="190" fill="none" stroke="#ffffff" stroke-opacity="0.15" stroke-width="8" />
+  <!-- Rupee Symbol + Chart Line -->
+  <g filter="url(#shadow)" fill="#ffffff">
+    <path d="M190 140 H322 C330 140 336 146 336 154 C336 162 330 168 322 168 H190 C182 168 176 162 176 154 C176 146 182 140 190 140 Z" />
+    <path d="M190 196 H322 C330 196 336 202 336 210 C336 218 330 224 322 224 H260 C280 236 292 254 294 276 C296 298 286 316 268 328 L330 408 C335 414 334 424 328 429 C322 434 312 433 307 427 L236 336 H206 V422 C206 430 200 436 192 436 C184 436 178 430 178 422 V210 C178 202 184 196 192 196 H260 C264 196 266 196 268 196 C264 186 256 180 240 178 H190 C182 178 176 172 176 164 C176 156 182 150 190 150 H192 V196 Z M206 224 V308 H250 C266 308 276 296 276 278 C276 258 266 244 246 224 H206 Z" />
+  </g>
+</svg>
